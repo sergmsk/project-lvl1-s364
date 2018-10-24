@@ -6,3 +6,6 @@ start:
 
 publish:
 	npm publish
+
+lint:
+	npx ./node_modules/.bin/eslint .
