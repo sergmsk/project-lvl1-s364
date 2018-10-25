@@ -1,3 +1,4 @@
 #!/usr/local/bin/node
+import { brainEven } from '..';
 
-console.log('\nbrain-even');
+brainEven();
