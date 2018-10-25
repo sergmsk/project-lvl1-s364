@@ -2,8 +2,8 @@
 [![Build Status](https://travis-ci.org/sergmsk/project-lvl1-s364.svg?branch=master)](https://travis-ci.org/sergmsk/project-lvl1-s364) [![Maintainability](https://api.codeclimate.com/v1/badges/fd42fec1b2fc76af413d/maintainability)](https://codeclimate.com/github/sergmsk/project-lvl1-s364/maintainability)
 
 ## install
-```npm install -g brgms```
+```$ npm install -g brgms```
 ## play
-```brain-even```
+```$ brain-even```
 
 [![asciicast](https://asciinema.org/a/WKHVwfwbBhXBSFAHokUljCK7l.png)](https://asciinema.org/a/WKHVwfwbBhXBSFAHokUljCK7l)
