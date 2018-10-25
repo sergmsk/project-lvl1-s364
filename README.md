@@ -3,3 +3,5 @@
 
 ## install
 ```npm install -g brgms```
+
+[![asciicast](https://asciinema.org/a/WKHVwfwbBhXBSFAHokUljCK7l.png)](https://asciinema.org/a/WKHVwfwbBhXBSFAHokUljCK7l)
