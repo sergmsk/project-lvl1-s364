@@ -3,5 +3,7 @@
 
 ## install
 ```npm install -g brgms```
+## play
+```brain-even```
 
 [![asciicast](https://asciinema.org/a/WKHVwfwbBhXBSFAHokUljCK7l.png)](https://asciinema.org/a/WKHVwfwbBhXBSFAHokUljCK7l)
