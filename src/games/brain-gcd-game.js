@@ -1,9 +1,5 @@
 const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
-const gcd = (a, b) => {
-	if (b === 0)
-		return Math.abs(a);
-	return gcd(b, a % b);
-}
+const gcd = (a, b) => ((b === 0) ? Math.abs(a) : gcd(b, a % b));
 
 const brainGCDGame = () => {
   const specification = 'Find the greatest common divisor of given numbers.';
