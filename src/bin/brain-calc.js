@@ -1,4 +1,4 @@
 #!/usr/local/bin/node
 import { game } from '..';
 
-game('brainEven');
+game('brainCalc');

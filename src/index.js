@@ -1,22 +1,36 @@
 import readline from 'readline-sync';
-import brainEvenGame from './brain-even-game';
+import brainEven from './games/brain-even-game';
+import brainCalc from './games/brain-calc-game';
 
-const welcome = () => console.log('\nWelcome to Brain Games!');
-const askName = () => readline.question('\nMay I have your name? ');
-const hello = name => console.log(`Hello, ${name}!\n`);
+const getGame = nameGame => ((nameGame === 'brainEven') ? brainEven : brainCalc);
+const print = text => console.log(text);
+const welcome = () => print('\nWelcome to Brain Games!');
+const printSpecification = text => print(text);
+const ask = text => readline.question(text);
+const hello = name => print(`Hello, ${name}!\n`);
 
 export const brainGames = () => {
   welcome();
-  const name = askName();
+  const name = ask();
   hello(name);
 };
 
-const specificationBrainEven = () => console.log('Answer "yes" if number even otherwise answer "no".');
-
-export const brainEven = () => {
+export const game = (nameGame) => {
+  const { generator, specification } = getGame(nameGame)();
   welcome();
-  specificationBrainEven();
-  const name = askName();
+  printSpecification(specification);
+  const name = ask('\nMay I have your name? ');
   hello(name);
-  brainEvenGame(name);
+  for (let i = 0; i < 3; i += 1) {
+    const step = generator();
+    print(`Question: ${step.question}`);
+    const answer = ask('Your answer: ');
+    if (answer !== step.rightAnswer) {
+      print(`\n'${answer}' is wrong answer ;(. Correct answer was '${step.rightAnswer}'.`);
+      print(`Let's try again, ${name}!`);
+      return;
+    }
+    print('Correct!');
+  }
+  print(`\nCongratulations, ${name}!`);
 };
