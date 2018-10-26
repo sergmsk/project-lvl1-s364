@@ -1,8 +1,25 @@
 import readline from 'readline-sync';
 import brainEven from './games/brain-even-game';
 import brainCalc from './games/brain-calc-game';
+import brainGCD from './games/brain-gcd-game';
 
-const getGame = nameGame => ((nameGame === 'brainEven') ? brainEven : brainCalc);
+const getGame = (nameGame) => {
+  let f;
+  switch (nameGame) {
+    case 'brainGCD':
+      f = brainGCD;
+      break;
+    case 'brainEven':
+      f = brainEven;
+      break;
+    case 'brainCalc':
+      f = brainCalc;
+      break;
+    default:
+      break;
+  }
+  return f;
+};
 const print = text => console.log(text);
 const welcome = () => print('\nWelcome to Brain Games!');
 const printSpecification = text => print(text);
