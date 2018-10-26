@@ -7,5 +7,7 @@
 ```$ brain-even```
 ## play brain-calc game
 ```$ brain-calc```
+## play brain-gcd game
+```$ brain-gcd```
 
 [![asciicast](https://asciinema.org/a/ArsEcW0nSQJJESbZibLk0BuhQ.png)](https://asciinema.org/a/ArsEcW0nSQJJESbZibLk0BuhQ)
