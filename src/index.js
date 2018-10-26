@@ -11,7 +11,7 @@ const hello = name => print(`Hello, ${name}!\n`);
 
 export const brainGames = () => {
   welcome();
-  const name = ask();
+  const name = ask('\nMay I have your name? ');
   hello(name);
 };
 
