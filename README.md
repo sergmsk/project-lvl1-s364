@@ -10,4 +10,4 @@
 ## play brain-gcd game
 ```$ brain-gcd```
 
-[![asciicast](https://asciinema.org/a/ArsEcW0nSQJJESbZibLk0BuhQ.png)](https://asciinema.org/a/ArsEcW0nSQJJESbZibLk0BuhQ)
+[![asciicast](https://asciinema.org/a/HVNBuyXdXwenrNC8fEUoO6asW.png)](https://asciinema.org/a/HVNBuyXdXwenrNC8fEUoO6asW)
