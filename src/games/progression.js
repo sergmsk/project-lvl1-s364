@@ -11,7 +11,7 @@ const generatorProgression = (init, step, len, indexHide) => {
   const arr = [];
   for (let i = 0; i < len; i += 1) {
     if (i === indexHide) arr[i] = '..';
-    arr[i] = init + i * step;
+    else arr[i] = init + i * step;
   }
   return arr.join(' ');
 };
