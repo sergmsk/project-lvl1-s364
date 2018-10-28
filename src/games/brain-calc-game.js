@@ -1,6 +1,9 @@
 import game from '..';
 import { getRandomInt } from '../utils';
 
+const minRandomNum = 1;
+const maxRandomNum = 100;
+
 const specification = 'What is the result of the expression?';
 const getRandomOperator = () => {
   const matrix = [
@@ -13,8 +16,8 @@ const getRandomOperator = () => {
 };
 
 const generator = () => {
-  const num1 = getRandomInt(1, 99);
-  const num2 = getRandomInt(1, 99);
+  const num1 = getRandomInt(minRandomNum, maxRandomNum);
+  const num2 = getRandomInt(minRandomNum, maxRandomNum);
   const operator = getRandomOperator();
   const question = `${num1} ${operator('symbol')} ${num2}`;
   const rightAnswer = `${operator(num1, num2)}`;
