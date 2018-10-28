@@ -7,13 +7,11 @@ const maxRandomNum = 100;
 const specification = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (number) => {
-  const stop = number / 3;
-  const iter = (num, div) => {
-    if (num % div !== 0 && div < stop) return iter(num, div + 1);
-    if (num % div !== 0 && div > stop) return true;
-    return false;
-  };
-  return iter(number, 2);
+  if (number < 2) return false;
+  for (let i = 2; i < number; i += 1) {
+    if (number % i === 0) return false;
+  }
+  return true;
 };
 
 const generator = () => {
