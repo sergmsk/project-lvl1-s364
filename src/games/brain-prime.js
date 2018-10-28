@@ -1,13 +1,20 @@
 import game from '..';
-import { getRandomInt, primeGenerator } from '../utils';
+import getRandomInt from '../utils';
 
 const minRandomNum = 2;
 const maxRandomNum = 100;
 
 const specification = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const setPrime = primeGenerator(maxRandomNum);
-const isPrime = n => setPrime.has(n);
+const isPrime = (number) => {
+  const stop = number / 3;
+  const iter = (num, div) => {
+    if (num % div !== 0 && div < stop) return iter(num, div + 1);
+    if (num % div !== 0 && div > stop) return true;
+    return false;
+  };
+  return iter(number, 2);
+};
 
 const generator = () => {
   const question = getRandomInt(minRandomNum, maxRandomNum);

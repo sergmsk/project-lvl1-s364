@@ -1,5 +1,5 @@
 import game from '..';
-import { getRandomInt } from '../utils';
+import getRandomInt from '../utils';
 
 const minRandomNum = 1;
 const maxRandomNum = 50;
