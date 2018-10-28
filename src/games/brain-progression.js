@@ -1,5 +1,5 @@
 import game from '..';
-import { getRandomInt } from '../utils';
+import getRandomInt from '../utils';
 
 const specification = 'What number is missing in this progression?';
 
