@@ -9,5 +9,7 @@
 ```$ brain-calc```
 ## play brain-gcd game
 ```$ brain-gcd```
+## play brain-progression game
+```$ brain-progression```
 
 [![asciicast](https://asciinema.org/a/HVNBuyXdXwenrNC8fEUoO6asW.png)](https://asciinema.org/a/HVNBuyXdXwenrNC8fEUoO6asW)
