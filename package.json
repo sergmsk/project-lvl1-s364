@@ -1,6 +1,6 @@
 {
   "name": "brgms",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Brain-games project",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
