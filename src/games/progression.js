@@ -7,25 +7,21 @@ const length = 10;
 const minRandomNum = 1;
 const maxRandomNum = 50;
 
-const generatorProgression = (init, step, len) => {
-  const arrProgression = [init];
-  for (let i = 1; i < len; i += 1) {
-    arrProgression.push(arrProgression[i - 1] + step);
+const generatorProgression = (init, step, len, indexHide) => {
+  const arr = [];
+  for (let i = 0; i < len; i += 1) {
+    if (i === indexHide) arr[i] = '..';
+    arr[i] = init + i * step;
   }
-  return arrProgression;
+  return arr.join(' ');
 };
-const makeQuestion = (arr, indexToHide) => {
-  const arrTmp = arr.concat();
-  arrTmp[indexToHide] = '..';
-  return arrTmp.join(' ');
-};
+
 const generator = () => {
   const initNum = getRandomInt(minRandomNum, maxRandomNum);
   const stepLength = getRandomInt(minRandomNum, maxRandomNum);
-  const progressionArr = generatorProgression(initNum, stepLength, length);
-  const indexAnswer = getRandomInt(0, length - 1);
-  const rightAnswer = `${initNum + stepLength * indexAnswer}`;
-  const question = makeQuestion(progressionArr, indexAnswer);
+  const indexToHide = getRandomInt(0, length - 1);
+  const question = generatorProgression(initNum, stepLength, length, indexToHide);
+  const rightAnswer = `${initNum + stepLength * indexToHide}`;
   return { question, rightAnswer };
 };
 
