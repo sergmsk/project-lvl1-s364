@@ -3,6 +3,9 @@
 
 ## install
 ```$ npm install -g brgms```
+
+[![asciicast](https://asciinema.org/a/Qok0LCDEjy4z2SCN0jiI5tchQ.png)](https://asciinema.org/a/Qok0LCDEjy4z2SCN0jiI5tchQ)
+
 ## play brain-even game
 ```$ brain-even```
 
