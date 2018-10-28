@@ -12,14 +12,11 @@ export const primeGenerator = (max) => {
     }
     for (let k = p + 1; k <= max; k += 1) {
       if (arrMatrix[k]) {
+        setPrime(k);
         p = k;
         break;
       }
     }
-  } while (p * p <= max);
-
-  arrMatrix.forEach((el, index) => {
-    if (el) setPrime.add(index);
-  });
+  } while (p <= max);
   return setPrime;
 };
