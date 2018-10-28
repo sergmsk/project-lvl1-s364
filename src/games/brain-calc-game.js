@@ -5,14 +5,15 @@ const minRandomNum = 1;
 const maxRandomNum = 100;
 
 const specification = 'What is the result of the expression?';
+
+const matrixOperators = [
+  (a, b) => ((a === 'symbol') ? '-' : a - b),
+  (a, b) => ((a === 'symbol') ? '+' : a + b),
+  (a, b) => ((a === 'symbol') ? '*' : a * b),
+];
 const getRandomOperator = () => {
-  const matrix = [
-    (a, b) => ((a === 'symbol') ? '-' : a - b),
-    (a, b) => ((a === 'symbol') ? '+' : a + b),
-    (a, b) => ((a === 'symbol') ? '*' : a * b),
-  ];
   const int = getRandomInt(0, 2);
-  return matrix[int];
+  return matrixOperators[int];
 };
 
 const generator = () => {
