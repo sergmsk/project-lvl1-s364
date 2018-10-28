@@ -19,9 +19,9 @@ const generatorProgression = (init, step, len, indexHide) => {
 const generator = () => {
   const initNum = getRandomInt(minRandomNum, maxRandomNum);
   const stepLength = getRandomInt(minRandomNum, maxRandomNum);
-  const indexToHide = getRandomInt(0, length - 1);
-  const question = generatorProgression(initNum, stepLength, length, indexToHide);
-  const rightAnswer = `${initNum + stepLength * indexToHide}`;
+  const answerIndex = getRandomInt(0, length - 1);
+  const question = generatorProgression(initNum, stepLength, length, answerIndex);
+  const rightAnswer = `${initNum + stepLength * answerIndex}`;
   return { question, rightAnswer };
 };
 
